@@ -66,8 +66,8 @@ class Position {
   final double speedAccuracy;
 
   @override
-  String toString() {
-    return 'Lat: $latitude, Long: $longitude';
+  String toString([int fractionDigits]) {
+    return 'Lat: ${latitude.toStringAsFixed(fractionDigits)}, Long: ${longitude.toStringAsFixed(fractionDigits)}';
   }
 
   /// Converts a collection of [Map] objects into a collection of [Position] objects.
